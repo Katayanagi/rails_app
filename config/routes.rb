@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'chat/index'
+
+  get 'chatview/index'
+
   get 'home/index'
 
   devise_for :users
