@@ -1,2 +1,7 @@
-<h1>Sessions#preview</h1>
-<p>Find me in app/views/sessions/preview.html.erb</p>
+<h1>トレンド</h1>
+<br />
+<% @tweets.each do |tweet| %>
+
+ <p><%= link_to ""+tweet.name ,controller: "sessions", action: "index", para: ""+tweet.name  %></p>
+
+  <% end %>
