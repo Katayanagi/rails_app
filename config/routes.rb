@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'sessions/index'
 
   get 'sessions/preview'
+  resources :databases
 
   get 'chat/index'
 

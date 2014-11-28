@@ -1,0 +1,27 @@
+<h1>データベース</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>　名前　</th>
+      <th>　住所　</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @databases.each do |database| %>
+      <tr>
+        <td>　<%= database.name %></td>
+        <td>　<%= database.address %></td>
+        <td>　<%= link_to '詳細', database %></td>
+        <td>　<%= link_to '編集', edit_database_path(database) %></td>
+        <td>　<%= link_to '削除', database, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'データを追加', new_database_path %>
