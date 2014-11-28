@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :databases
+
   get 'chat/index'
 
   get 'chatview/index'
